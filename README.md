@@ -8,8 +8,8 @@
 
 1. VS Code와 공식 Codex 확장을 설치하고 **그 Mac 소유자의 ChatGPT 계정**으로 로그인합니다.
    설치 전이라면 [처음 설치하기](manual/01-first-setup.md)를 보세요.
-2. 설치 담당자가 이 비공개 저장소를 clone하거나 ZIP으로 전달합니다. 받는 사람에게
-   Rasara의 다른 저장소 접근이나 담당자의 GitHub 토큰을 주지 않습니다.
+2. 이 공개 저장소를 clone하거나 [ZIP 다운로드](https://github.com/rasara-inc/ai-desk-setup/archive/refs/heads/main.zip)로 받습니다.
+   초대나 GitHub 로그인 없이 사용할 수 있습니다.
 3. VS Code에서 받은 `ai-desk-setup` 폴더를 열고 Codex에 아래 문장을 보내세요.
 
 ```text
@@ -21,7 +21,7 @@
 마지막에는 AI Desk를 열고 내가 첫 업무를 직접 해 보도록 도와줘.
 ```
 
-이미 GitHub 접근 권한이 있는 **설치 담당자용** 명령:
+터미널에서 받으려면 다음 명령을 사용합니다(인증 불필요):
 
 ```sh
 git clone https://github.com/rasara-inc/ai-desk-setup.git
