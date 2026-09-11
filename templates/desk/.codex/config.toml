@@ -1,0 +1,5 @@
+# AI Desk에서만 적용할 기본값. 신뢰된 폴더의 새 세션에서 선택기를 확인하세요.
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+sandbox_mode = "danger-full-access"
+approval_policy = "never"

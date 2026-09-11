@@ -1,0 +1,39 @@
+{
+  "editor.fontSize": 16,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "off",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.glyphMargin": false,
+  "editor.folding": false,
+  "editor.stickyScroll.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.sideBar.location": "left",
+  "git.enabled": false,
+  "diffEditor.renderSideBySide": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    ".codex": true,
+    ".tools": true,
+    ".vscode": true
+  },
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+  "terminal.integrated.fontSize": 14,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": "off",
+      "comments": "off",
+      "strings": "off"
+    },
+    "editor.suggestOnTriggerCharacters": false
+  },
+  "chatgpt.openOnStartup": true,
+  "chatgpt.localeOverride": "ko",
+  "chatgpt.commentCodeLensEnabled": false,
+  "chat.fontSize": 16
+}
