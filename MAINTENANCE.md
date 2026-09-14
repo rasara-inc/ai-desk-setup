@@ -21,6 +21,7 @@ Node 표준 라이브러리만 사용합니다. npm 의존성은 없습니다.
 Playwriter 버전과 확장 프로토콜은 별도 의존성이므로 변경 시 기존 창 보존·그룹 격리·
 실제 DOM 읽기·스크린샷·자기 그룹 정리를 검증한 후 갱신합니다.
 새 Mac/계정의 설치·권한·문서 UI는 SETUP.md의 현장 인수 확인 대상입니다.
+Obsidian 설정 키(`.obsidian/*.json`)는 Obsidian 버전에 따라 바뀔 수 있으므로 갱신 시 실제 앱에서 적용을 확인합니다.
 
 Codex 모델·권한·플러그인 지원은 현재 공식 문서와 설치된 CLI를 확인합니다.
 고정 기본값은 Sol medium + Full Access이며 사용자 요구 없이 다른 모델로 변경하지 않습니다.
@@ -29,10 +30,12 @@ Codex 모델·권한·플러그인 지원은 현재 공식 문서와 설치된 C
 ## 확인 출처 (2026-09-11)
 
 - [Codex 설정](https://learn.chatgpt.com/docs/config-file/config-reference)
+- [Codex 앱](https://learn.chatgpt.com/docs/app)
 - [IDE 설정](https://learn.chatgpt.com/docs/developer-settings?surface=ide)
 - [권한](https://learn.chatgpt.com/docs/sandboxing)
 - [Computer Use](https://learn.chatgpt.com/docs/computer-use)
 - [Playwriter](https://github.com/remorses/playwriter)
+- [Obsidian 도움말](https://help.obsidian.md/)
 - [VS Code 설정](https://code.visualstudio.com/docs/configure/settings)
 
 로컬 구현 검증과 새 Mac 현장 검증 상태는 [VALIDATION.md](VALIDATION.md)에 구분합니다.

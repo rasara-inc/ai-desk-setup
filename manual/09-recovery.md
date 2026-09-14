@@ -21,7 +21,8 @@ AI에게 “추가 변경을 멈추고, 무엇이 바뀌었는지와 복구 가�
 개인화한 매뉴얼·Memory·TODO를 템플릿으로 통째로 덮어쓰지 않습니다.
 심볼릭 링크를 따라 외부 위치에 쓰려 하면 중단합니다.
 
-프로젝트 설정은 `AI Desk/.codex/config.toml`, 문서 화면 설정은 `.vscode/settings.json`입니다.
+프로젝트 설정은 `AI Desk/.codex/config.toml`, 문서 화면 설정은 `.obsidian/`(VS Code 예비는 `.vscode/settings.json`)입니다.
+Obsidian을 쓰면 `.obsidian/app.json` 등이 바뀌므로 재실행 시 `conflict`가 정상입니다. 기본값과 비교해 필요한 것만 되돌립니다.
 기존 `~/.codex/config.toml`은 자동으로 변경하지 않습니다.
 정책이나 기존 프로젝트 설정이 우선하면 설치 에이전트가 원인을 확인하고 새 세션에서 검증합니다.
 

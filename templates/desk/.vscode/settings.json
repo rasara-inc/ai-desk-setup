@@ -18,6 +18,7 @@
   "files.exclude": {
     "**/.DS_Store": true,
     ".codex": true,
+    ".obsidian": true,
     ".tools": true,
     ".vscode": true
   },

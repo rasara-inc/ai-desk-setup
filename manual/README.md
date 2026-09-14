@@ -4,7 +4,7 @@
 
 1. [처음 설치하기](01-first-setup.md) — 앱·계정 준비
 2. [AI와 세션의 기본 개념](02-basics.md) — 채팅에서 업무로
-3. [VS Code와 단축키](03-vscode.md) — 파일·AI·미리보기
+3. [Obsidian과 Codex 앱](03-obsidian.md) — 문서 창·AI 창·단축키
 4. [Markdown 연습](04-markdown.md) — 제목·체크박스·표·링크
 5. [TODO와 공통기억](05-todo-memory.md) — 하루 시작과 마감
 6. [이메일 정리](06-email.md) — 중요 메일 보호·광고·구독 해지

@@ -9,7 +9,8 @@
 | `ls` | 현재 폴더의 파일 이름 보기 |
 | `cd "$HOME/AI Desk"` | 내 업무 폴더로 이동 |
 | `open .` | 현재 폴더를 Finder로 열기 |
-| `code .` | 현재 폴더를 VS Code로 열기(code 등록 후) |
+| `open -a Obsidian .` | 현재 폴더를 Obsidian으로 열기(vault 등록 후) |
+| `open -a Codex` | Codex 앱 열기 |
 | `codex` | 현재 폴더에서 Codex 시작(CLI 설치 후) |
 | `codex resume` | 이전 대화 선택 |
 | ↑ | 이전에 입력한 명령 보기 |

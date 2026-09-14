@@ -17,11 +17,16 @@ API 키나 별도의 API 결제는 필요하지 않습니다. 기존 구독이 �
 
 ## 아직 Codex가 없을 때
 
-1. [VS Code 공식 다운로드](https://code.visualstudio.com/download)에서 Mac 버전을 설치합니다.
-2. VS Code의 Extensions에서 **OpenAI가 게시한 Codex**를 설치합니다.
-   [공식 IDE 안내](https://learn.chatgpt.com/docs/codex/ide).
-3. Codex를 열고 자신의 ChatGPT 계정으로 로그인합니다.
-4. 받은 설치 키트 폴더를 File > Open Folder로 열고 README의 설치 요청 문장을 보냅니다.
+1. [Codex 맥 앱](https://learn.chatgpt.com/docs/app)을 설치합니다.
+   다운로드: `https://persistent.oaistatic.com/codex-app-prod/Codex.dmg`
+2. Codex 앱을 열고 자신의 ChatGPT 계정으로 로그인합니다.
+3. 받은 설치 키트 폴더를 Codex 앱의 프로젝트로 추가하고 README의 설치 요청 문장을 보냅니다.
+4. 문서를 보고 고치는 창은 [Obsidian](https://obsidian.md/download)입니다. 설치 에이전트가
+   AI Desk 폴더를 만든 뒤 함께 엽니다. 업무용도 무료입니다.
+
+Codex 앱을 설치할 수 없는 Mac에서는 [VS Code](https://code.visualstudio.com/download)에
+**OpenAI가 게시한 Codex** 확장을 설치해 같은 절차를 진행합니다.
+[공식 IDE 안내](https://learn.chatgpt.com/docs/codex/ide).
 
 에이전트가 실행 환경 설치를 도울 때 공식 출처를 사용합니다:
 [Node.js](https://nodejs.org/en/download), [Chrome](https://www.google.com/chrome/),

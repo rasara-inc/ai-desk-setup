@@ -6,11 +6,12 @@
 
 ## 다른 Mac에서 시작하기
 
-1. VS Code와 공식 Codex 확장을 설치하고 **그 Mac 소유자의 ChatGPT 계정**으로 로그인합니다.
+1. Codex 맥 앱을 설치하고 **그 Mac 소유자의 ChatGPT 계정**으로 로그인합니다.
    설치 전이라면 [처음 설치하기](manual/01-first-setup.md)를 보세요.
+   문서 창은 Obsidian입니다. 설치 에이전트가 업무 폴더를 만든 뒤 함께 엽니다.
 2. 이 공개 저장소를 clone하거나 [ZIP 다운로드](https://github.com/rasara-inc/ai-desk-setup/archive/refs/heads/main.zip)로 받습니다.
    초대나 GitHub 로그인 없이 사용할 수 있습니다.
-3. VS Code에서 받은 `ai-desk-setup` 폴더를 열고 Codex에 아래 문장을 보내세요.
+3. Codex 앱에서 받은 `ai-desk-setup` 폴더를 프로젝트로 열고 아래 문장을 보내세요.
 
 ```text
 이 저장소의 AGENTS.md와 SETUP.md를 읽고 이 Mac에 AI Desk를 설치해 줘.
@@ -38,7 +39,6 @@ ZIP 사용자는 GitHub 로그인·Git 설치가 필요 없습니다.
 ~/AI Desk/
 ├── START-HERE.md
 ├── AGENTS.md
-├── AI Desk.code-workspace
 ├── 00_inbox/
 ├── 00_TODO/          YYYY-MM-DD-Ddd.md, recurring.md, projects.md, Archived/
 ├── Personal/         선택
@@ -48,6 +48,10 @@ ZIP 사용자는 GitHub 로그인·Git 설치가 필요 없습니다.
 ├── manual/           한국어 매뉴얼
 └── .tools/           설치 후에도 남는 브라우저 도구
 ```
+
+숨김 폴더 `.obsidian`(문서 창 설정), `.codex`(모델·권한), `.vscode`(VS Code 예비)도 함께 만듭니다.
+화면은 **Obsidian(문서) + Codex 앱(AI 대화)** 두 창이며 둘 다 같은 폴더를 봅니다.
+Codex 앱을 설치할 수 없는 Mac은 VS Code + Codex 확장으로 같은 폴더를 엽니다.
 
 기본은 ChatGPT **Pro 5x**, **GPT-5.6 Sol / medium + Full Access**입니다. 복잡하거나 실수 비용이
 큰 작업은 **GPT-6 Astra / low** 전환을 한 번 제안하고 실제 선택을 확인합니다.

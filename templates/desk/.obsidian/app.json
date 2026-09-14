@@ -1,0 +1,20 @@
+{
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "spellcheck": true,
+  "foldHeading": false,
+  "foldIndent": false,
+  "showFrontmatter": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00_inbox",
+  "attachmentFolderPath": "00_inbox",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "promptDelete": true,
+  "trashOption": "system",
+  "showUnsupportedFiles": true
+}

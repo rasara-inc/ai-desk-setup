@@ -14,6 +14,7 @@ test('미리보기는 아무것도 생성하지 않고 설치는 키트 독립 �
  const r=run('setup.mjs','--target',dest,'--areas','personal,business','--apply');assert.equal(r.status,0,r.stderr);
  assert.ok(fs.existsSync(path.join(dest,'Personal')));assert.ok(fs.existsSync(path.join(dest,'Business')));assert.equal(fs.existsSync(path.join(dest,'Work')),false);
  assert.equal(fs.existsSync(path.join(dest,'.git')),false);
+ assert.ok(fs.existsSync(path.join(dest,'.obsidian/app.json')));assert.equal(fs.existsSync(path.join(dest,'AI Desk.code-workspace')),false);
  assert.equal(run('doctor.mjs','--target',dest).status,0);
  const moved=path.join(tmp,'Moved Desk');fs.renameSync(dest,moved);
  assert.equal(run('doctor.mjs','--target',moved).status,0);
@@ -42,11 +43,15 @@ test('현지 날짜·요일은 자정과 DST 경계에서도 맞는다',()=>{
  assert.equal(dailyName('America/Vancouver',new Date('2026-09-14T06:30:00Z')),'2026-09-13-Sun.md');
  assert.equal(dailyName('America/Toronto',new Date('2026-11-01T06:30:00Z')),'2026-11-01-Sun.md');
 });
-test('doctor는 파일 누락과 Full Access 설정 누락을 검출한다',t=>{
+test('doctor는 파일 누락·Full Access 설정 누락·Obsidian 링크 설정 변경을 검출한다',t=>{
  const dest=path.join(fixture(t),'Desk');run('setup.mjs','--target',dest,'--apply');
  fs.unlinkSync(path.join(dest,'manual/02-basics.md'));
  assert.equal(run('doctor.mjs','--target',dest).status,1);
  run('setup.mjs','--target',dest,'--apply');
  fs.writeFileSync(path.join(dest,'.codex/config.toml'),'model = "gpt-5.6-sol"\n');
+ assert.equal(run('doctor.mjs','--target',dest).status,1);
+ fs.rmSync(path.join(dest,'.codex'),{recursive:true});run('setup.mjs','--target',dest,'--apply');
+ assert.equal(run('doctor.mjs','--target',dest).status,0);
+ fs.writeFileSync(path.join(dest,'.obsidian/app.json'),JSON.stringify({useMarkdownLinks:false}));
  assert.equal(run('doctor.mjs','--target',dest).status,1);
 });

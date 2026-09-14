@@ -11,27 +11,22 @@
 
 ## 2. 사전 점검과 앱 설치
 
-`sw_vers`, `uname -m`, `command -v node`, `node --version`, `command -v code`,
-`command -v codex`, `codex --version`으로 필요한 것만 확인한다.
+`sw_vers`, `uname -m`, `command -v node`, `node --version`, `command -v codex`, `codex --version`,
+`ls /Applications/Codex.app /Applications/Obsidian.app`으로 필요한 것만 확인한다.
 Mac의 지역·시간대는 읽어서 소유자 거주 지역과 대조한다. 시스템 시간대를 몰래 바꾸지 않는다.
 
-필수: VS Code, OpenAI Codex 확장, Node.js 22 이상(현재 지원 LTS 권장), Chrome.
-Codex CLI는 진단·MCP 설정을 위해 설치한다. 공식 설치 문서는 manual/01-first-setup.md 참조.
+필수: Codex 맥 앱(AI 대화 창), Obsidian(문서 창), Node.js 22 이상(현재 지원 LTS 권장), Chrome.
+Codex CLI는 진단·MCP 설정을 위해 설치한다. 앱과 CLI는 같은 `~/.codex` 설정을 읽는다.
+공식 설치 문서는 manual/01-first-setup.md 참조. VS Code + Codex 확장은 Codex 앱을 설치할 수 없을 때의 예비다.
 기존 Homebrew가 있으면 해당 공식 formula/cask의 존재를 `brew info`로 확인하여 필요한 것만 설치한다.
 없다면 Homebrew·개발 툴체인을 먼저 깔지 말고 각 공급자의 공식 Mac installer를 이용한다.
 서명·개발자 정보를 확인하며 관리자 암호와 OS 승인 버튼은 소유자가 직접 처리한다.
 Node 설치 후 현재 터미널에서 경로가 보이지 않으면 PATH를 확인하고 새 터미널에서 확인한다.
-터미널에 없는 `code`는 VS Code 명령 팔레트의
-`Shell Command: Install 'code' command in PATH`로 등록하거나 앱 내 CLI를 사용한다.
+Codex 앱은 `https://persistent.oaistatic.com/codex-app-prod/Codex.dmg`, Obsidian은 obsidian.md/download에서 받는다.
+서명 게시자가 OpenAI·Obsidian인지 확인한다. Obsidian은 업무용도 무료라 라이선스 구매가 필요 없다.
+예비로 VS Code를 쓸 때만 `code --install-extension openai.chatgpt`와 한국어 팩(`MS-CEINTL.vscode-language-pack-ko`)을 설치한다.
 
-VS Code 확장:
-
-```sh
-code --install-extension openai.chatgpt
-code --install-extension MS-CEINTL.vscode-language-pack-ko
-```
-
-OpenAI/Microsoft 게시자를 확인한다. 소유자 계정으로 ChatGPT 로그인.
+Codex 앱에서 소유자 계정으로 ChatGPT 로그인.
 Pro 5x 선택·결제·청구통화·세금 확인은 소유자가 한다. 설치자가 자기 계정으로 대신 로그인하지 않는다.
 기존 구독이 있으면 현재 요금제를 먼저 확인한다. API 키가 없어도 진행한다.
 
@@ -57,18 +52,25 @@ Memory/profile.md에 호칭·도시·시간대·언어·통화·선택 영역·�
 manual/10-my-guide.md에 그 사람의 첫 3개 업무, 로그인 서비스 이름(비밀번호 제외),
 실제 화면에서 확인한 실행 방법, 백업 위치, 재개 방법을 한국어로 작성한다.
 
-## 4. VS Code를 문서 책상으로 구성
+## 4. Obsidian을 문서 창, Codex 앱을 대화 창으로 구성
 
-`AI Desk.code-workspace`를 연다. 폴더를 열어도 .vscode/settings.json이 적용된다.
-한국어 표시 언어를 적용하고 필요할 때 재시작한다. 왼쪽 파일 탐색기,
-가운데 START-HERE.md 미리보기, 오른쪽 Codex를 둔다.
-Activity Bar 우클릭에서 Run and Debug, Source Control, Testing 등 불필요한 항목만 숨긴다.
-Codex·Explorer·Search는 남긴다. 패널 이동은 실제 지원 UI로 하며 확장 view ID를 추측하지 않는다.
-터미널은 필요할 때만 펼친다. 숨기기는 제거가 아니며 View > Appearance에서 복구 가능하다고 설명한다.
+Obsidian을 열고 “Open folder as vault”로 `~/AI Desk`를 선택한다. 새 vault를 만들지 않는다.
+설치가 넣은 `.obsidian/app.json`·`appearance.json`·`core-plugins.json`이 적용된다(Live Preview,
+표준 마크다운 링크, 새 파일·첨부는 00_inbox, 그래프·백링크·캔버스 꺼짐, 파일 삭제는 Mac 휴지통).
+표시 언어는 vault가 아니라 앱 설정이므로 Settings > General > Language에서 한국어를 고른다.
+커뮤니티 플러그인·Sync·Publish는 켜지 않는다. Obsidian이 `.obsidian`에 workspace.json 등을
+추가로 만드는 것은 정상이며 setup 재실행 시 conflict로 보고되면 기본값과 비교만 한다.
+
+Codex 앱에서 `~/AI Desk`를 프로젝트로 추가하고 폴더 신뢰를 소유자가 확인한다.
+화면 배치는 왼쪽 Obsidian(파일 목록 + START-HERE.md), 오른쪽 Codex 앱으로 안내한다.
+Codex 앱 메뉴가 영어면 필요한 메뉴 두세 개만 알려 준다. 대화는 한국어다.
+
+VS Code 예비 경로에서는 폴더를 열면 `.vscode/settings.json`이 적용된다. Activity Bar 우클릭으로
+Run and Debug, Source Control, Testing만 숨기고 Codex·Explorer·Search는 남긴다.
 Settings Sync는 소유자 의사를 확인하기 전 연결하지 않는다.
 
 새 Codex 세션에서 모델 선택기가 **GPT-5.6 Sol / medium**, 권한 표시가 **Full Access**인지 확인한다.
-CLI에서는 /model, IDE에서는 현재 모델·추론 선택 UI를 사용한다.
+CLI에서는 /model, 앱에서는 현재 모델·추론·권한 선택 UI를 사용한다.
 설정 파일만 보고 현재 실행 중인 모델이 바뀌었다고 말하지 않는다.
 Astra low 전환 후 간단한 업무로 돌아오면 Sol medium 복귀를 안내한다.
 
@@ -95,12 +97,13 @@ MCP 이름이 목록에 보이는 것만으로 완료 처리하지 않는다. �
 | 확인 항목 | 통과 증거 |
 | --- | --- |
 | 폴더 | doctor 통과, .git 없음, 선택한 영역만 존재 |
-| VS Code | 소유자가 workspace를 다시 열어 한국어 문서·Codex를 확인 |
+| Obsidian | 소유자가 vault를 다시 열어 한국어 문서 편집·자동 저장을 확인 |
+| Codex 앱 | 소유자가 AI Desk 프로젝트를 다시 열어 한국어 대화를 확인 |
 | 계정/모델/권한 | 소유자 로그인, 구독 표시와 Sol medium + Full Access 실제 확인 |
 | 기억 | 새 세션에서 profile과 이전 인계 내용을 읽어 정확히 설명 |
 | TODO | 실제 현지 날짜·요일 파일 생성, 연습 항목 체크 |
 | 브라우저 | 자기 새 그룹에서 페이지 읽기·스크린샷, 자기 탭만 정리 |
-| 컴퓨터 제어 | 허용한 VS Code 문서를 읽는 비파괴 실습, 실제 도구 응답 |
+| 컴퓨터 제어 | Obsidian에 열어 둔 허용 문서를 읽는 비파괴 실습, 실제 도구 응답 |
 | 문서 도구 | 사용 가능한 기능만 표기, 파일 생성·다시 열기 |
 | 이메일 | 선택한 계정 읽기 성공, 변경 권한 범위 명시 또는 보류 사유 |
 | 백업 | 소유자가 선택한 백업 위치·실행일·파일 1개 복원 확인 또는 미검증 명시 |

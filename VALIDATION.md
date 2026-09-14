@@ -15,9 +15,16 @@
 자체 구현 검증이며 독립 에이전트 리뷰는 수행하지 않았습니다.
 브라우저 확인은 이미 확장과 relay가 준비된 Mac에서 수행했습니다.
 
+## Obsidian 트랙 반영 (2026-09-14)
+
+- 문서 창을 VS Code에서 Obsidian + Codex 맥 앱 조합으로 바꿈. VS Code는 예비 경로로 유지.
+- 템플릿에 `.obsidian/app.json`·`appearance.json`·`core-plugins.json` 추가, `AI Desk.code-workspace` 제거.
+- doctor가 Obsidian 설정 JSON과 표준 마크다운 링크 설정(`useMarkdownLinks`·`relative`)을 검사.
+- Node 테스트 9개·링크 검사 통과. 실제 Obsidian이 이 설정을 읽는지는 현장 검증 대상.
+
 ## 새 Mac 현장 검증
 
 미실시. 소유자 계정 로그인, Pro 5x 표시, 새 세션 Sol medium + Full Access,
-VS Code 화면, Chrome 확장 신규 설치와 재부팅, Computer Use 권한, 메일 읽기,
+Obsidian vault 열기·한국어 표시·설정 적용, Codex 앱 프로젝트 열기, Chrome 확장 신규 설치와 재부팅, Computer Use 권한, 메일 읽기,
 문서 플러그인 및 백업 복원은 대상 Mac에서 SETUP.md에 따라 검증해야 합니다.
 현장 결과는 해당 사용자의 AI Desk/Memory/setup-status.md에 기록합니다.
